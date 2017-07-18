@@ -5,12 +5,19 @@ d = -4;
 e = -32;
 f = 32;
 
+#Intervalos do grafico
+x1 = -10
+x2 = 10
+y1 = -10
+y2 = 10
+
+
 #Variação A
 while a<10
    hold on
    grid on
    a+=0.5;
-   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
    text(0,10,"Variação do coeficiente A");
    pause(0.1);
    clf;
@@ -20,7 +27,7 @@ while a>-10
    hold on
    grid on
    a-=0.5;
-   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
    text(0,10,"Variação do coeficiente A");
    pause(0.1);
    clf;
@@ -28,21 +35,21 @@ end
 a = 1;
 
 #Variação B
-while b<2
+while b<9
   hold on
   grid on
-  b+=0.1;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  b+=0.3;
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente B");
   pause(0.1);
   clf;
 end
 b = 0;
-while b>-2
+while b>-12
   hold on
   grid on
-  b-=0.1;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  b-=0.3;
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente B");
   pause(0.1);
   clf;
@@ -54,7 +61,7 @@ while c<5
   hold on
   grid on
   c+=0.1;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente C");
   pause(0.1);
   clf;
@@ -64,7 +71,7 @@ while c>3
   hold on
   grid on
   c-=0.1;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente C");
   pause(0.1);
   clf;
@@ -76,7 +83,7 @@ while d<5
   hold on
   grid on
   d+=0.4;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente D");
   pause(0.1);
   clf;
@@ -86,7 +93,7 @@ while d>-12
   hold on
   grid on
   d-=0.4;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente D");
   pause(0.1);
   clf;
@@ -98,7 +105,7 @@ while e<-26
   hold on
   grid on
   e+=0.3;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente E");
   pause(0.1);
   clf;
@@ -108,7 +115,7 @@ while e>-40
   hold on
   grid on
   e-=0.3;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente E");
   pause(0.1);
   clf;
@@ -119,8 +126,8 @@ e = -32;
 while f>10
   hold on
   grid on
-  f-=0.6;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  f-=1;
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente F");
   pause(0.1);
   clf;
@@ -129,10 +136,9 @@ f = 32;
 while f<50
   hold on
   grid on
-  f+=0.6;
-  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[-6 10 0 10]);
+  f+=1;
+  ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   text(0,10,"Variação do coeficiente F");
   pause(0.1);
   clf;
 end
-
