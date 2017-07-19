@@ -19,7 +19,7 @@ while a<10
    a+=0.5;
    h = ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
    #text(0,9,"Varia??o do coeficiente A");
-   saveas(gcf(), strcat("img/a/aplus",num2str(imgc++)), "jpg");
+   #saveas(gcf(), strcat("a/aplus",num2str(imgc++)), "jpg");
    pause(0.1);
    clf;
 end
@@ -31,7 +31,7 @@ while a>-10
    a-=0.5;
    ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
    #text(0,10,"Varia??o do coeficiente A");
-   saveas(gcf(), strcat("img/a/aminus",num2str(imgc++)), "jpg");
+   #saveas(gcf(), strcat("a/aminus",num2str(imgc++)), "jpg");
    pause(0.1);
    clf;
 end
@@ -44,7 +44,7 @@ while b<9
   b+=0.3;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente B");
-  saveas(gcf(), strcat("img/b/bplus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("b/bplus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
@@ -56,82 +56,82 @@ while b>-12
   b-=0.3;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente B");
-  saveas(gcf(), strcat("img/b/bminus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("b/bminus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
 b = 0;
 imgc = 0;
 #Varia??o C
-while c<5
+while c<15
   hold on
   grid on
-  c+=0.1;
+  c+=0.7;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente C");
-  saveas(gcf(), strcat("img/c/cplus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("c/cplus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
 c = 4;
 imgc = 0;
-while c>3
+while c>-15
   hold on
   grid on
-  c-=0.1;
+  c-=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente C");
-  saveas(gcf(), strcat("img/c/cminus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("c/cminus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
 c = 4;
 imgc = 0;
 #Varia??o D
-while d<5
+while d<15
   hold on
   grid on
-  d+=0.4;
+  d+=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente D");
-  saveas(gcf(), strcat("img/d/dplus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("d/dplus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
 d = -4;
 imgc = 0;
-while d>-12
+while d>-20
   hold on
   grid on
-  d-=0.4;
+  d-=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente D");
-  saveas(gcf(), strcat("img/d/dminus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("d/dminus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
 d = -4;
 imgc = 0;
 #Varia??o E
-while e<-26
+while e<-20
   hold on
   grid on
-  e+=0.3;
+  e+=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente E");
-  saveas(gcf(), strcat("img/e/eplus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("e/eplus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
 e = -32;
 imgc = 0;
-while e>-40
+while e>-50
   hold on
   grid on
-  e-=0.3;
+  e-=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente E");
-  saveas(gcf(), strcat("img/e/eminus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("e/eminus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
@@ -144,7 +144,7 @@ while f>10
   f-=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente F");
-  saveas(gcf(), strcat("img/f/fminus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("f/fminus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
@@ -156,7 +156,7 @@ while f<50
   f+=1;
   ezplot(@(X,Y) a.*X.^2 + b.*X.*Y + c.*Y.^2 + d.*X + e.*Y + f,[x1 x2 y1 y2]);
   #text(0,10,"Varia??o do coeficiente F");
-  saveas(gcf(), strcat("img/f/fplus",num2str(imgc++)), "jpg");
+  #saveas(gcf(), strcat("f/fplus",num2str(imgc++)), "jpg");
   pause(0.1);
   clf;
 end
