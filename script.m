@@ -6,10 +6,10 @@ e = -32;
 f = 32;
 
 #Intervalos do grafico
-x1 = -10
-x2 = 10
-y1 = -10
-y2 = 10
+x1 = -10;
+x2 = 10;
+y1 = -10;
+y2 = 10;
 
 
 #Variação A
